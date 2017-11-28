@@ -6,8 +6,8 @@ require 'redcarpet'
 	erb_str_main = File.read(erb_file_main)
 
 		@current_time = Time.now 
-		arrFile = Dir.entries("./filetitle/").select {|f| !File.directory? f}
-		arr = arrFile.sort
+		mdFile = Dir.entries("./filemarkdown/").select {|f| !File.directory? f}
+		arr = mdFile.sort
 		list_html = [] 
 		renderer = Redcarpet::Render::HTML
 		markdown = Redcarpet::Markdown.new(renderer,highlight: true,quote: true, autolink:true, tables: true, strikethrough: true,fenced_code_blocks: true)
@@ -19,7 +19,7 @@ require 'redcarpet'
 
 		result_content = ERB.new(erb_str_content).result()
 		File.open(html_file_content, 'w') do |f|
-			f.write(result_content)
+			f.write(result_content) 
 		end
 		list_html.push(html_file_content) 
 	end
