@@ -1,0 +1,4 @@
+ <% @filename ='filetitle/'+ arr[i] %>
+    <% File.foreach(@filename).with_index do |line| %>
+       <%=markdown.render("#{line}") %>
+    <% end %>
