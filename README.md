@@ -3,7 +3,7 @@ Redcarpet is readily available as a Ruby gem. It will build some native extensio
 ```
 $ [sudo] gem install redcarpet
 ```
-In local folder ***/huongdan/**, run: 
+In local folder run: 
 ```
 $ python -m SimpleHTTPServer 
 $ ruby hdtest.rb
