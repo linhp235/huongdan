@@ -1,3 +1,2 @@
  <% @filename ='filemarkdown/'+ arr[i] %>
- <% file_content = File.open(@filename,'r') %>
-    <%= markdown.render(file_content.read) %>
+    <%= markdown.render(File.read(@filename)) %>
