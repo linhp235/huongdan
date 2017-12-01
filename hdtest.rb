@@ -10,7 +10,7 @@ require 'redcarpet'
 		arr = mdFile.sort
 		list_html = [] 
 		renderer = Redcarpet::Render::HTML
-		markdown = Redcarpet::Markdown.new(renderer,highlight: true,quote: true, autolink:true, tables: true, strikethrough: true,fenced_code_blocks: true)
+		markdown = Redcarpet::Markdown.new(renderer,:highlight => true,quote: true, autolink:true,tables: true, strikethrough: true,fenced_code_blocks: true)
 	for i in 0..arr.length-1
 		erb_file_content = 'content.html.erb'
 		html_file_content1 = File.basename(arr[i], 'md')  

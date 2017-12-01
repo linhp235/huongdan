@@ -1,4 +1,3 @@
  <% @filename ='filemarkdown/'+ arr[i] %>
-    <% File.foreach(@filename).with_index do |line| %>
-       <%=markdown.render("#{line}") %>
-    <% end %>
+ <% file_content = File.open(@filename,'r') %>
+    <%= markdown.render(file_content.read) %>
